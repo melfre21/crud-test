@@ -75,7 +75,7 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 ![Home](http://front-praxio.afrenti.com.br/images_readme/home.png)
 
 ## Projeto Online
-- Projeto pode ser encontrado online no endereço: [Praxio Test](http://front-praxio.afrenti.com.br).
+- Projeto pode ser encontrado online no endereço: [Praxio Test](https://front-praxio.afrenti.com.br).
 
 ## Autor
 - Melfre Diego (web developer fullstack)
