@@ -6,6 +6,8 @@ import { first } from 'rxjs/operators';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { CepService } from './../../../services/cep.service';
 
+import Swal from 'sweetalert2'
+
 @Component({
 	selector: 'app-cadastro',
 	templateUrl: './cadastro.component.html',
@@ -22,7 +24,7 @@ export class CadastroComponent implements OnInit {
 		private cepService: CepService,
 		private usuarioService: UsuarioService,
 		private route: ActivatedRoute,
-        private router: Router,
+		private router: Router,
 	) { }
 
 	ngOnInit(): void {
@@ -55,7 +57,7 @@ export class CadastroComponent implements OnInit {
 		this.submitted = true;
 
 		//Verifica se o form esta valido
-		if(this.formCadastro.invalid){
+		if (this.formCadastro.invalid) {
 			return;
 		}
 
@@ -63,8 +65,7 @@ export class CadastroComponent implements OnInit {
 		this.usuarioService.create(this.formCadastro.value)
 			.pipe(first())
 			.subscribe((response: any) => {
-				console.log('Usuario cadastrado com sucesso');
-				this.router.navigate(['/login']);
+				this.successAlert();
 			}, (error) => {
 				console.log(error);
 			});
@@ -85,7 +86,7 @@ export class CadastroComponent implements OnInit {
 				});
 		}
 	}
-	
+
 	// Metodo para popular dos dados de endereço vindo da api VIACEP
 	populaDadosForm(dados: any) {
 		this.formCadastro.patchValue({
@@ -98,15 +99,32 @@ export class CadastroComponent implements OnInit {
 	}
 
 	// Metodo seria utilizado para enviar EMAIL vindo do formulario para verificar se ja existe algum cadastro com esse dado
-	buscaEmail(){
+	buscaEmail() {
 		//Implementar metodo para verificar se email ja existe
 	}
 
 	// Metodo seria utilizado para enviar CPF vindo do formulario para verificar se ja existe algum cadastro com esse dado
-	buscaCPF(){
+	buscaCPF() {
 		//Implementar metodo para verificar se CPF ja existe
 	}
 
-	
+	successAlert() {
+		let timerInterval
+		Swal.fire({
+			icon: 'success',
+			title: 'Cadastro realizado com sucesso!',
+			html: 'Aguarde, em instantes você será redirecionado para pagina de login',
+			timer: 3000,
+			timerProgressBar: true,
+			allowEscapeKey:true,
+			allowOutsideClick: false,
+		}).then((result) => {
+			if (result.dismiss === Swal.DismissReason.timer) {
+				this.router.navigate(['/login']);
+			}
+		})
+	}
+
+
 
 }

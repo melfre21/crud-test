@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ignoreElements } from 'rxjs/operators';
 import { UsuarioLogin } from 'src/app/models/usuario-login';
 import { AuthService } from 'src/app/services/auth.service';
+
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -9,7 +12,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  public usuarioLogin: UsuarioLogin = new UsuarioLogin();
+  usuarioLogin: UsuarioLogin = new UsuarioLogin();
+  submitted = false;
 
   constructor(private authService: AuthService) { }
 
@@ -21,9 +25,12 @@ export class LoginComponent implements OnInit {
 
     const { email, password } = this.usuarioLogin;
 
-    console.log('Enviando login');
+    this.submitted = true;
 
-    // this.authService.login(email, password);
+    //Verifica se o form esta valido
+		if (formLogin.invalid) {
+			return;
+		}
 
     this.authService.login(email, password).subscribe(
       data => {
