@@ -1,27 +1,73 @@
-# PraxioTest
+# Praxio Front-end Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+Projeto prático de desenvolvimento de uma aplicação teste para vaga de front-end.
 
-## Development server
+### 🛠 Tecnologias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## Code scaffolding
+- [Angular v11](https://expo.io/)
+- [Laravel(API)](https://laravel.com/)
+- [Bootstrap v5](https://getbootstrap.com/)
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Outras bibliotecas e Api's
 
-## Build
+- [VIACEP](https://viacep.com.br/)
+- [ngx-mask](https://github.com/JsDaddy/ngx-mask)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instalação do Projeto Back-end(Laravel)
 
-## Running end-to-end tests
+Como foco do projeto é front-end disponibilizo uma API, com os EndPoints no endereço abaixo.
+- [Praxio Back Api](https://praxio.afrenti.com.br/api)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Cadastro:
+```
+POST /users
+```
+#### login:
+```
+POST /login
+```
 
-## Further help
+## Instalação do Projeto Front-end(Angular v11)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Foi utilizado a versão mais recente do framework Angular e o projeto pode ser inicializado da seguinte forma:
+
+- Instale versão do [NODEJS](https://nodejs.org/en/) (14.15.5):
+- Utilizo a versão do [NPMJS](https://www.npmjs.com/) (6.14.11):
+
+Depois das instalações iniciais basta rodar o comando NPM INSTALL ou comente NPM I na raiz do projeto para instalar todas as bibliotecas e dependências.
+
+```
+npm install
+```
+
+Depois de instaladas pode-se iniciar a aplicação com o seguinte comando e :
+
+```
+ng serve <project> [options]
+```
+mais opções encontra-se na documentação oficial em: [https://angular.io/cli/serve](https://angular.io/cli/serve)
+
+## Estrutura de pastas
+![Estrutura de pastas](http://front-praxio.afrenti.com.br/images_readme/estrutura_pastas.png)
+- Components - aqui temos os arquivos comuns a toda aplicação tais como Header e Footer.
+- Guards - são as guardas de rotas utilizadas para implementar segurança em nossas aplicações.
+- Helpers - encontramos aqui o serviço de interceptação de rotas HTTP, antes mesmo de chegar ao servidor. 
+- Models - modelos da aplicação tais como de Usuario.ts e UsuarioLogin.ts
+- Pages - aqui estão as principais páginas da nossa aplicação como HOME, Cadastro e Login
+- Services - nessa pasta temos os serviços que fazem as requisições direto na API.
+
+## Funcionalidades
+- Cadastro de usuários, suas validações e mascaras nos inputs solicitados.
+- Login formulário para acesso à aplicação
+- Home página no qual para ter acesso o visitante tem que fazer um breve cadastro e efetuar login.
+
+## Autor
+Melfre Diego (web developer fullstack)
