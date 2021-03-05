@@ -17,6 +17,7 @@ Outras bibliotecas e Api's
 
 - [VIACEP](https://viacep.com.br/)
 - [ngx-mask](https://github.com/JsDaddy/ngx-mask)
+- [sweetAlert2](https://sweetalert2.github.io/)
 
 
 
@@ -65,9 +66,19 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 - Services - nessa pasta temos os serviços que fazem as requisições direto na API.
 
 ## Funcionalidades
-- Cadastro de usuários, suas validações e mascaras nos inputs solicitados.
+- Cadastro de Usuários, suas validações e mascaras nos inputs solicitados.
+![Cadastro e Validações](http://front-praxio.afrenti.com.br/images_readme/cadstro_validacoes.png)
+![Cadastro/Sucesso](http://front-praxio.afrenti.com.br/images_readme/cadastro_com_sucesso.png)
 - Login formulário para acesso à aplicação
+![Login e Validações](http://front-praxio.afrenti.com.br/images_readme/login_e_validacoes.png)
 - Home página no qual para ter acesso o visitante tem que fazer um breve cadastro e efetuar login.
+![Home](http://front-praxio.afrenti.com.br/images_readme/home.png)
+
+## Projeto Online
+- Projeto pode ser encontrado online no endereço: [Praxio Test](https://front-praxio.afrenti.com.br).
 
 ## Autor
-Melfre Diego (web developer fullstack)
+- Melfre Diego (web developer fullstack)
+- (86)99474-9020
+- melfre21@gmail.com
+

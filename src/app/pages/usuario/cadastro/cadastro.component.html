@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <h1 class="title-forms mb-2">Cadastrar</h1>
-            <p>Utilizando Reactive Forms</p>
+            <p class="subtitle-forms">Utilizando Reactive Forms</p>
             <div class="alert alert-info alert-dismissible fade show" role="alert">
                 <strong>Importante:</strong> Todos os campos são de preenchimento obrigatórios.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -16,7 +16,7 @@
                                 <input type="text" class="form-control" placeholder="Nome/Razão Social"
                                     formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
                                 <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                    <div *ngIf="f.name.errors.required">Campo Nome é obrigatório.</div>
+                                    <div *ngIf="f.name.errors.required">Nome é obrigatório.</div>
                                 </div>
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                                     [ngClass]="{ 'is-invalid': submitted && f.cpf.errors }" formControlName="cpf"
                                     mask="000.000.000-00">
                                 <div *ngIf="submitted && f.cpf.errors" class="invalid-feedback">
-                                    <div *ngIf="f.cpf.errors.required">Campo CPF é obrigatório.</div>
+                                    <div *ngIf="f.cpf.errors.required">CPF é obrigatório.</div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -34,7 +34,7 @@
                                     [ngClass]="{ 'is-invalid': submitted && f.telefone.errors }"
                                     formControlName="telefone" mask="(00) 0000-0000||(00) 0 0000-0000">
                                 <div *ngIf="submitted && f.telefone.errors" class="invalid-feedback">
-                                    <div *ngIf="f.telefone.errors.required">Campo Telefone é obrigatório.</div>
+                                    <div *ngIf="f.telefone.errors.required">Telefone é obrigatório.</div>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                 <input type="email" class="form-control" placeholder="E-mail"
                                     [ngClass]="{ 'is-invalid': submitted && f.email.errors }" formControlName="email">
                                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                                    <div *ngIf="f.email.errors.required">Campo E-mail é obrigatório.</div>
+                                    <div *ngIf="f.email.errors.required">E-mail é obrigatório.</div>
                                     <div *ngIf="f.email.errors.email">Informe um E-mail valido.</div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
                                     [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
                                     formControlName="password">
                                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                                    <div *ngIf="f.password.errors.required">Campo Senha é obrigatório.</div>
+                                    <div *ngIf="f.password.errors.required">Senha é obrigatório.</div>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                     [ngClass]="{ 'is-invalid': submitted && f.cep.errors }" formControlName="cep"
                                     mask="00000-000" (blur)="buscaCep()">
                                 <div *ngIf="submitted && f.cep.errors" class="invalid-feedback">
-                                    <div *ngIf="f.cep.errors.required">Campo CEP é obrigatório.</div>
+                                    <div *ngIf="f.cep.errors.required">CEP é obrigatório.</div>
                                 </div>
                             </div>
                             <div class="col-sm-8">
@@ -75,7 +75,7 @@
                                     [ngClass]="{ 'is-invalid': submitted && f.logradouro.errors }"
                                     formControlName="logradouro">
                                 <div *ngIf="submitted && f.logradouro.errors" class="invalid-feedback">
-                                    <div *ngIf="f.logradouro.errors.required">Campo Logradouro é obrigatório.</div>
+                                    <div *ngIf="f.logradouro.errors.required">Logradouro é obrigatório.</div>
                                 </div>
                             </div>
                         </div>
@@ -84,14 +84,14 @@
                                 <input type="text" class="form-control" placeholder="Numero"
                                     [ngClass]="{ 'is-invalid': submitted && f.numero.errors }" formControlName="numero">
                                 <div *ngIf="submitted && f.numero.errors" class="invalid-feedback">
-                                    <div *ngIf="f.numero.errors.required">Campo Número é obrigatório.</div>
+                                    <div *ngIf="f.numero.errors.required">Número é obrigatório.</div>
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" placeholder="Bairro"
                                     [ngClass]="{ 'is-invalid': submitted && f.bairro.errors }" formControlName="bairro">
                                 <div *ngIf="submitted && f.bairro.errors" class="invalid-feedback">
-                                    <div *ngIf="f.bairro.errors.required">Campo Bairro é obrigatório.</div>
+                                    <div *ngIf="f.bairro.errors.required">Bairro é obrigatório.</div>
                                 </div>
                             </div>
                         </div>
@@ -100,14 +100,14 @@
                                 <input type="text" class="form-control" placeholder="UF"
                                     [ngClass]="{ 'is-invalid': submitted && f.uf.errors }" formControlName="uf">
                                 <div *ngIf="submitted && f.uf.errors" class="invalid-feedback">
-                                    <div *ngIf="f.uf.errors.required">Campo UF é obrigatório.</div>
+                                    <div *ngIf="f.uf.errors.required">UF é obrigatório.</div>
                                 </div>
                             </div>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" placeholder="Cidade"
                                     [ngClass]="{ 'is-invalid': submitted && f.cidade.errors }" formControlName="cidade">
                                 <div *ngIf="submitted && f.cidade.errors" class="invalid-feedback">
-                                    <div *ngIf="f.cidade.errors.required">Campo Cidade é obrigatório.</div>
+                                    <div *ngIf="f.cidade.errors.required">Cidade é obrigatório.</div>
                                 </div>
                             </div>
                         </div>
