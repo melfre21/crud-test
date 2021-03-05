@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Open+Sans&family=Roboto&display=swap');
+
+// Variaveis cores
+$bg-btn-forms: #7626FF;
+$bg-btn-shadow-form: #867FF67A;
+$color-title-form: #585859;
+$color-link-form: #0077C5;
+$border-write: #FFFFFF;
+
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Mukta', sans-serif;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  }
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+// Custom CSS
+.btn-custom-rounded{
+  border-radius: 50px;
+}
+
+.btn-form{
+  border: 1px solid $bg-btn-forms;
+  background: $bg-btn-forms !important;
+  box-shadow: 5px 10px 18px red;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.btn-form:hover{
+  color: #fff;
+  transform: translateY(-3px);
+}
+.btn-saiba-mais{
+  border: 1px solid $border-write;
+  background: transparent !important;
+  box-shadow: 5px 10px 18px red;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 0.9rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  min-width: 200px;
+}
+.btn-saiba-mais:hover{
+  border: 1px solid $border-write;
+  color: #fff;
+  transform: translateY(-3px);
+}
+.link-form{
+  color: $color-link-form;
+}
+.link-form>span{
+  color: $color-title-form;
+}
