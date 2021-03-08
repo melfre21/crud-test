@@ -43,7 +43,7 @@ Foi utilizado a versão mais recente do framework Angular e o projeto pode ser i
 - Instale versão do [NODEJS](https://nodejs.org/en/) (14.15.5):
 - Utilizo a versão do [NPMJS](https://www.npmjs.com/) (6.14.11):
 
-Depois das instalações iniciais basta rodar o comando NPM INSTALL ou comente NPM I na raiz do projeto para instalar todas as bibliotecas e dependências.
+Depois das instalações iniciais basta rodar o comando NPM INSTALL ou NPM I na raiz do projeto para instalar todas as bibliotecas e dependências.
 
 ```
 npm install
