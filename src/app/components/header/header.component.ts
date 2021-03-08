@@ -10,17 +10,20 @@ import Swal from 'sweetalert2';
 export class HeaderComponent implements OnInit {
 
   mostrarBtnLogout: boolean = false;
+  headerAbsolute: boolean = false;
 
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     if(this.authService.isLoggedIn){
       this.mostrarBtnLogout = true;
+      this.headerAbsolute = true;
     }
 
     this.authService.btnLogoutEmitter.subscribe(
       (mostrar: any) => {
         this.mostrarBtnLogout = mostrar;
+        this.headerAbsolute = mostrar;
       }
     );
   }
