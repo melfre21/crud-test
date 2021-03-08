@@ -34,8 +34,7 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(email, password).subscribe(
       data => {
-
-        console.log("resposta do servidor em login component", data);
+        console.log("Usuario logado com sucesso");
       },
       err => {
         console.log('Erro ao logar no component login', err);
