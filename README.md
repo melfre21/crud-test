@@ -82,3 +82,6 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 - (86)99474-9020
 - melfre21@gmail.com
 
+## OBS...
+- Melhorias visuais podem ser implementadas posteriormente na pagina home no que diz respeito a responsividade.
+
