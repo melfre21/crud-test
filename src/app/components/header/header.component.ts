@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HeaderComponent implements OnInit {
 
   mostrarBtnLogout: boolean = false;
+  headerAbsolute: boolean = false;
 
   constructor(private authService: AuthService) { }
 
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit {
     this.authService.btnLogoutEmitter.subscribe(
       (mostrar: any) => {
         this.mostrarBtnLogout = mostrar;
+        this.headerAbsolute = mostrar;
       }
     );
   }
