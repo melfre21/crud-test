@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     if(this.authService.isLoggedIn){
       this.mostrarBtnLogout = true;
+      this.headerAbsolute = true;
     }
 
     this.authService.btnLogoutEmitter.subscribe(
