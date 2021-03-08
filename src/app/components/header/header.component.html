@@ -6,7 +6,7 @@
             </a>
         </div>
         <div *ngIf="mostrarBtnLogout" class="p-2 bd-highlight mt-2">
-            <a [routerLink]="['/logout']" routerLinkActive="router-link-active" class="btn btn-outline-secondary btn-sm btn-custom-rounded" >Logout</a>
+            <a class="btn btn-outline-secondary btn-sm btn-custom-rounded" (click)="logout()" >Logout</a>
         </div>
     </div>
 </header>

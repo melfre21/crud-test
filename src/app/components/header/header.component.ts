@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-header',
@@ -25,5 +26,24 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
+
+  logout(){
+    Swal.fire({
+      title: 'Deseja realmente sair da aplicação?',
+      text: "You won't be able to revert this!",
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Não',
+      confirmButtonText: 'Quero sair!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.authService.logout();
+      }
+    })
+  }
+
+
 
 }
