@@ -7,6 +7,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 import { CepService } from './../../../services/cep.service';
 
 import Swal from 'sweetalert2'
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
 	selector: 'app-cadastro',
@@ -16,7 +17,7 @@ import Swal from 'sweetalert2'
 export class CadastroComponent implements OnInit {
 
 	formCadastro: FormGroup;
-
+	campoTipoTexto: boolean;
 	submitted = false;
 
 	constructor(
@@ -25,6 +26,7 @@ export class CadastroComponent implements OnInit {
 		private usuarioService: UsuarioService,
 		private route: ActivatedRoute,
 		private router: Router,
+		private loading: NgxSpinnerService
 	) { }
 
 	ngOnInit(): void {
@@ -54,6 +56,7 @@ export class CadastroComponent implements OnInit {
 	// Submete os dados do cadastro de usuário para o service de criação se increvendo e aguardando resposta do servidor
 	// logo em seguida caso de ok(200, 201..), redireciona para para de login
 	onSubmit() {
+		this.loading.show();
 		this.submitted = true;
 
 		//Verifica se o form esta valido
@@ -65,7 +68,9 @@ export class CadastroComponent implements OnInit {
 		this.usuarioService.create(this.formCadastro.value)
 			.pipe(first())
 			.subscribe((response: any) => {
+				this.loading.hide();
 				this.successAlert();
+
 			}, (error) => {
 				console.log(error);
 			});
@@ -78,11 +83,14 @@ export class CadastroComponent implements OnInit {
 
 	// Metodo utilizado para enviar os dados ao serviço de busca CEP, na API open source VIACEP
 	buscaCep() {
+		
 		const cep = this.formCadastro.get('cep').value;
 		if (cep != null && cep !== '') {
+			this.loading.show();
 			this.cepService.getCEP(cep)
 				.subscribe(dados => {
 					this.populaDadosForm(dados)
+					this.loading.hide();
 				});
 		}
 	}
@@ -118,11 +126,16 @@ export class CadastroComponent implements OnInit {
 			timerProgressBar: true,
 			allowEscapeKey:true,
 			allowOutsideClick: false,
+			showConfirmButton: false,
 		}).then((result) => {
 			if (result.dismiss === Swal.DismissReason.timer) {
 				this.router.navigate(['/login']);
 			}
 		})
+	}
+
+	toggleTipoTexto() {
+		this.campoTipoTexto = !this.campoTipoTexto;
 	}
 
 

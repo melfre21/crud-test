@@ -18,6 +18,7 @@ Outras bibliotecas e Api's
 - [VIACEP](https://viacep.com.br/)
 - [ngx-mask](https://github.com/JsDaddy/ngx-mask)
 - [sweetAlert2](https://sweetalert2.github.io/)
+- [ngx-spinner](https://github.com/Napster2210/ngx-spinner)
 
 
 
@@ -69,8 +70,12 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 - Cadastro de Usuários, suas validações e mascaras nos inputs solicitados.
 ![Cadastro e Validações](http://front-praxio.afrenti.com.br/images_readme/cadstro_validacoes.png)
 ![Cadastro/Sucesso](http://front-praxio.afrenti.com.br/images_readme/cadastro_com_sucesso.png)
+
+
 - Login formulário para acesso à aplicação
 ![Login e Validações](http://front-praxio.afrenti.com.br/images_readme/login_e_validacoes.png)
+
+
 - Home página no qual para ter acesso o visitante tem que fazer um breve cadastro e efetuar login.
 ![Home](http://front-praxio.afrenti.com.br/images_readme/home.png)
 
@@ -83,5 +88,5 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 - melfre21@gmail.com
 
 ## OBS...
-- Melhorias visuais podem ser implementadas posteriormente na pagina home no que diz respeito a responsividade.
+- Melhorias visuais podem ser implementadas posteriormente na pagina home no que diz respeito a responsividade e também criando interceptor para loading, fazendo que o mesmo seja chamado a cada rota e request.
 

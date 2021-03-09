@@ -50,7 +50,6 @@ export class AuthService {
 
 	// Verifica se usuário esta logado através de um token existente e retorna um boolean 
 	get isLoggedIn(): boolean {
-		console.log("Metodo usuario logado");
 		let authToken = localStorage.getItem('access_token');
 		return (authToken !== null) ? true : false;
 	}

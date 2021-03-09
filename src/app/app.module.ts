@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,6 +17,7 @@ import { AuthService } from './services/auth.service';
 
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -31,12 +33,14 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     UsuarioModule,
     NgxMaskModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [
     AuthService,

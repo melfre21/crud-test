@@ -1,8 +1,9 @@
-    <app-header class="container-fluid"></app-header>
-    <div [ngClass]="{
-        'container h-100': adicionarClassContainer,
-        'h-100 d-flex flex-column bd-highligh justify-content-md-center': !adicionarClassContainer}">
-        <router-outlet class=""></router-outlet>
-    </div>
-    <app-footer class="mt-auto" *ngIf="!mostrarMenuLarge"></app-footer>
-    <app-footer-large class="mt-auto" *ngIf="mostrarMenuLarge"></app-footer-large>
+<ngx-spinner type="ball-pulse" size="medium" bdColor="rgba(118,38,255,0.6)"></ngx-spinner>
+<app-header class="container-fluid"></app-header>
+<div [ngClass]="{
+    'container h-100': adicionarClassContainer,
+    'h-100 d-flex flex-column bd-highligh justify-content-md-center': !adicionarClassContainer}">
+    <router-outlet class=""></router-outlet>
+</div>
+<app-footer class="mt-auto" *ngIf="!mostrarMenuLarge"></app-footer>
+<app-footer-large class="mt-auto" *ngIf="mostrarMenuLarge"></app-footer-large>

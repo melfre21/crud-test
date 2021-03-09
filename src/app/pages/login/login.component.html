@@ -13,10 +13,21 @@
                         <div *ngIf="!email.valid && submitted">Informe um e-mail válido.</div>
                     </div>
                 </div>
-                <div class="form-group mb-3">
-                    <input [(ngModel)]="usuarioLogin.password" name="password" type="password" class="form-control"
+                <div class="form-group mb-3 position-relative">
+                    <input [(ngModel)]="usuarioLogin.password" name="password" [type]="campoTipoTexto ? 'text' : 'password'" class="form-control"
                         id="password" placeholder="Senha" required #password="ngModel"
                         [ngClass]="{ 'is-invalid': !password.valid && submitted }">
+                        <button type="button" class="btn-show-pass">
+                            <i
+                                class="bi"
+                                [ngClass]="{
+                                'bi-eye-slash': !campoTipoTexto,
+                                'bi-eye': campoTipoTexto
+                                }"
+                                (click)="toggleTipoTexto()"
+                            ></i>
+
+                        </button>
                     <div *ngIf="!password.valid && submitted" class="invalid-feedback">
                         <div *ngIf="!password.valid && submitted">Informe uma senha.</div>
                     </div>
