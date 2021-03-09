@@ -13,6 +13,7 @@ import Swal from 'sweetalert2'
 export class LoginComponent implements OnInit {
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin();
+  campoTipoTexto: boolean;
   submitted = false;
 
   constructor(private authService: AuthService) { }
@@ -40,5 +41,9 @@ export class LoginComponent implements OnInit {
         console.log('Erro ao logar no component login', err);
       }
     ); 
+  }
+
+  toggleTipoTexto() {
+    this.campoTipoTexto = !this.campoTipoTexto;
   }
 }

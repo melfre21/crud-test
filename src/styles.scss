@@ -26,6 +26,15 @@ body {
   border-radius: 50px;
 }
 
+.btn-show-pass{
+  position: absolute;
+  background-color: transparent !important;
+  padding: .247rem .75rem !important;
+  border: none;
+  right: 8px;
+  top: 3px;
+}
+
 .btn-form{
   border: 1px solid $bg-btn-forms;
   background: $bg-btn-forms !important;

@@ -16,7 +16,7 @@ import Swal from 'sweetalert2'
 export class CadastroComponent implements OnInit {
 
 	formCadastro: FormGroup;
-
+	campoTipoTexto: boolean;
 	submitted = false;
 
 	constructor(
@@ -123,6 +123,10 @@ export class CadastroComponent implements OnInit {
 				this.router.navigate(['/login']);
 			}
 		})
+	}
+
+	toggleTipoTexto() {
+		this.campoTipoTexto = !this.campoTipoTexto;
 	}
 
 
