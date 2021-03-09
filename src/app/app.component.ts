@@ -20,7 +20,6 @@ export class AppComponent {
 
   ngOnInit(): void {
 
-
     if(this.authService.isLoggedIn){
         this.mostrarMenuLarge = true;
         this.adicionarClassContainer = true;
