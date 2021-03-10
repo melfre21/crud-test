@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
 
     //Verifica se o form esta valido
 		if (formLogin.invalid) {
+      this.loading.hide();
 			return;
 		}
 
