@@ -1,4 +1,4 @@
-# Praxio Front-end Test
+# CRUD Front-end Test
 
 Projeto prático de desenvolvimento de uma aplicação teste para vaga de front-end.
 
