@@ -25,7 +25,7 @@ Outras bibliotecas e Api's
 ## Instalação do Projeto Back-end(Laravel)
 
 Como foco do projeto é front-end disponibilizo uma API, com os EndPoints no endereço abaixo.
-- [Praxio Back Api](https://praxio.afrenti.com.br/api)
+
 
 #### Cadastro:
 ```
@@ -58,7 +58,7 @@ ng serve <project> [options]
 mais opções encontra-se na documentação oficial em: [https://angular.io/cli/serve](https://angular.io/cli/serve)
 
 ## Estrutura de pastas
-![Estrutura de pastas](http://front-praxio.afrenti.com.br/images_readme/estrutura_pastas.png)
+![Estrutura de pastas](http://afrenti.com.br/images_readme/estrutura_pastas.png)
 - Components - aqui temos os arquivos comuns a toda aplicação tais como Header e Footer.
 - Guards - são as guardas de rotas utilizadas para implementar segurança em nossas aplicações.
 - Helpers - encontramos aqui o serviço de interceptação de rotas HTTP, antes mesmo de chegar ao servidor. 
@@ -68,19 +68,19 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 
 ## Funcionalidades
 - Cadastro de Usuários, suas validações e mascaras nos inputs solicitados.
-![Cadastro e Validações](http://front-praxio.afrenti.com.br/images_readme/cadstro_validacoes.png)
-![Cadastro/Sucesso](http://front-praxio.afrenti.com.br/images_readme/cadastro_com_sucesso.png)
+![Cadastro e Validações](http://afrenti.com.br/images_readme/cadstro_validacoes.png)
+![Cadastro/Sucesso](http://afrenti.com.br/images_readme/cadastro_com_sucesso.png)
 
 
 - Login formulário para acesso à aplicação
-![Login e Validações](http://front-praxio.afrenti.com.br/images_readme/login_e_validacoes.png)
+![Login e Validações](http://afrenti.com.br/images_readme/login_e_validacoes.png)
 
 
 - Home página no qual para ter acesso o visitante tem que fazer um breve cadastro e efetuar login.
-![Home](http://front-praxio.afrenti.com.br/images_readme/home.png)
+![Home](http://afrenti.com.br/images_readme/home.png)
 
 ## Projeto Online
-- Projeto pode ser encontrado online no endereço: [Praxio Test](https://front-praxio.afrenti.com.br).
+- Projeto pode ser encontrado online no endereço: [Praxio Test](https://afrenti.com.br).
 
 ## Autor
 - Melfre Diego (web developer fullstack)
