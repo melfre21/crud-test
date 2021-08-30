@@ -80,7 +80,7 @@ mais opções encontra-se na documentação oficial em: [https://angular.io/cli/
 ![Home](http://afrenti.com.br/images_readme/home.png)
 
 ## Projeto Online
-- Projeto pode ser encontrado online no endereço: [Praxio Test](https://afrenti.com.br).
+- Projeto pode ser encontrado online no endereço: [Crud Test](https://afrenti.com.br).
 
 ## Autor
 - Melfre Diego (web developer fullstack)
